@@ -1,19 +1,19 @@
 package RepasoArreglos;
-import java.util.Scanner;
+import java.util.*;
 public class Ejercicio4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[] numbers = new int[10];
+        List<Integer> numbers = new ArrayList<Integer>();
 
         System.out.println("Ingrese 10 numeros ");
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = sc.nextInt();
+        for (int i = 0; i < 10; i++) {
+            numbers.add(sc.nextInt());
         }
 
         System.out.println("Numero que terminen en 4");
-        for (int i = 0; i < numbers.length; i++) {
-            if (lastDigit(numbers[i])) {
-                System.out.println("Numero "+numbers[i]+" en la posicion "+i);
+        for (int i = 0; i < numbers.size(); i++) {
+            if (lastDigit(numbers.get(i))) {
+                System.out.println("Numero "+numbers.get(i)+" en la posicion "+i);
             }
         }
     }

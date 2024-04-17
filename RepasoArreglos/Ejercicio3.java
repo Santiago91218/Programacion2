@@ -1,14 +1,12 @@
 package RepasoArreglos;
+import java.util.*;
 public class Ejercicio3 {
     public static void main(String[] args) {
-        int[] numbers = new int[10];
-        int count = 0;
-
+        List<Integer> numbers = new ArrayList<Integer>();
         for (int i = 100; i <= 300; i++) {
             if (isCousin(i)) {
-                numbers[count] = i;
-                count++;
-                if (count == 10) {
+                numbers.add(i);
+                if (numbers.size()==10) {
                     break;
                 }
             }
